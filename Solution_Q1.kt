@@ -3,10 +3,8 @@ class Solution {
     val UserList2 : HashMap<String, String> = hashMapOf()
 
     val result : ArrayList<String> = arrayListOf()
-    var order = 0
     var userArray = arrayListOf<String>()
     var inOutListArray = arrayListOf<Int>()
-    //var inOutArray = IntArray(100000)
 
     fun solution(record: Array<String>): Array<String> {
         for(currentRecord in record) {
@@ -26,13 +24,11 @@ class Solution {
                     UserList2.put(words[1], words[2])
 
                 }
-                //result.add("${words[1]}님이 들어왔습니다.")
                 userArray.add(words[1])
                 inOutListArray.add(0)
             }
 
             "Leave" -> {
-                //result.add("${words[1]}님이 나갔습니다.")
                 userArray.add(words[1])
                 inOutListArray.add(1)
             }
@@ -67,6 +63,7 @@ class Solution {
 
 }
 
+//테스트
 fun main(args:Array<String>) {
     val testcase :Array<String> = arrayOf("Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan")
 //    val testcase :Array<String> = arrayOf("Enter uid1234 Muzi",
